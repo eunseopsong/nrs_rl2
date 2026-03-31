@@ -1,5 +1,7 @@
 # Copyright (c) 2022-2025, The Isaac Lab Project Developers
 # SPDX-License-Identifier: BSD-3-Clause
+# 김태회 20260331
+
 
 from __future__ import annotations
 
