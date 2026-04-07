@@ -20,14 +20,14 @@ conda activate env_isaaclab
 
 ### 2) Training
 ```bash
-~/IsaacLab/isaaclab.sh -p ~/nrs_rl/scripts/skrl/train.py --task Template-Nrs-Rl-v0
+~/IsaacLab/isaaclab.sh -p ~/nrs_rl2/scripts/skrl/train.py --task Template-Nrs-Rl2-v0
 ```
 
 ### 3) Play
 Run this after training is finished.
 
 ```bash
-~/IsaacLab/isaaclab.sh -p ~/nrs_rl/scripts/skrl/play.py --task Template-Nrs-Rl-v0
+~/IsaacLab/isaaclab.sh -p ~/nrs_rl2/scripts/skrl/play.py --task Template-Nrs-Rl-v0
 ```
 
 ---
@@ -35,7 +35,7 @@ Run this after training is finished.
 ## How to Push into GitHub
 
 ```bash
-cd ~/nrs_rl/source/nrs_rl/nrs_rl/tasks/manager_based/nrs_rl
+cd ~/nrs_rl2/source/nrs_rl2/nrs_rl2/tasks/manager_based/nrs_rl2
 
 git init
 git add .
@@ -49,7 +49,7 @@ Then push with GitKraken.
 ## Repository Structure
 
 ```text
-nrs_rl/
+nrs_rl2/
 ├── agents/
 ├── assets/
 │   └── assets/
@@ -67,7 +67,7 @@ nrs_rl/
 ├── utils/
 │   ├── debug.py
 │   └── visualization.py
-└── nrs_rl_env_cfg.py
+└── nrs_rl2_env_cfg.py
 ```
 
 ---
@@ -157,7 +157,7 @@ Main role:
 - save episode plots
 - keep plotting logic separated from the reward module
 
-### `nrs_rl_env_cfg.py`
+### `nrs_rl2_env_cfg.py`
 Top-level Isaac Lab environment configuration.
 Main role:
 - define scene configuration
@@ -188,7 +188,7 @@ In the current structure:
 
 ## Execution Flow
 
-1. `nrs_rl_env_cfg.py` builds the environment configuration.
+1. `nrs_rl2_env_cfg.py` builds the environment configuration.
 2. The robot asset is loaded from `assets/assets/robots/ur10e_w_spindle.py`.
 3. The action term in `mdp/action.py` loads the HDF5 trajectory and generates joint commands.
 4. `mdp/observation.py` provides EE pose and trajectory target observations.
